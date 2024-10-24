@@ -10,5 +10,8 @@ Create a new block using type "Flexible Media Gallery".  By default, this is lim
 
 Place your block using Layout Builder or Block layout and the gallery should show.
 
+### I can't edit the captions
+The image caption field has been added, but you may need to adjust your media image form display to allow it to be edited.
+
 ## Uninstall
 Uninstalling will remove the custom block type, images styles, and associated fields.  The caption field added to media images will not be removed.
