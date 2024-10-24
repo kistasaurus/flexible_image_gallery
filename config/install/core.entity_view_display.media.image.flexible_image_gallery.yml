@@ -1,0 +1,41 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.flexible_image_gallery
+    - field.field.media.image.field_caption
+    - field.field.media.image.field_media_image
+    - image.style.flexible_gallery_thumbnail
+    - media.type.image
+  module:
+    - glightbox
+  enforced:
+    module:
+      - flexible_image_gallery
+_core:
+  default_config_hash: 73xaTNkI5J6sfFcBmNYeuk070X3mQS_iwwWaPYyfG2M
+id: media.image.flexible_image_gallery
+targetEntityType: media
+bundle: image
+mode: flexible_image_gallery
+content:
+  field_media_image:
+    type: glightbox
+    label: visually_hidden
+    settings:
+      glightbox_node_style: flexible_gallery_thumbnail
+      glightbox_node_style_first: ''
+      glightbox_image_style: ''
+      glightbox_gallery: parent
+      glightbox_gallery_custom: ''
+      glightbox_caption: custom
+      glightbox_caption_custom: '[media:field_caption]'
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  field_caption: true
+  name: true
+  thumbnail: true
+  uid: true

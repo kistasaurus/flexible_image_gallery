@@ -1,0 +1,10 @@
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - flexible_image_gallery
+id: flexible_image_gallery
+label: 'Flexible Image Gallery'
+revision: false
+description: 'Display a gallery of images.'

@@ -1,0 +1,33 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.flexible_image_gallery
+    - field.field.block_content.flexible_image_gallery.field_flexible_gallery
+  module:
+    - media_library
+  enforced:
+    module:
+      - flexible_image_gallery
+id: block_content.flexible_image_gallery.default
+targetEntityType: block_content
+bundle: flexible_image_gallery
+mode: default
+content:
+  field_flexible_gallery:
+    type: media_library_widget
+    weight: 1
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  body: true

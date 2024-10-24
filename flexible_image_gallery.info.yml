@@ -1,0 +1,12 @@
+name: 'Flexible Image Gallery Block'
+type: module
+description: 'Creates a custom block type to display a gallery of media images in a lovely, flexible grid.'
+package: Custom
+core_version_requirement: ^10 || ^11
+
+dependencies:
+  - glightbox:glightbox
+  - drupal:media
+  - drupal:media_library
+  - drupal:text
+  - drupal:block_content

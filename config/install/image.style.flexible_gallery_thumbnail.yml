@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - flexible_image_gallery
+name: flexible_gallery_thumbnail
+label: 'Flexible Gallery Thumbnail'
+effects:
+  e8abbabd-0d68-4192-a72c-1c99901d01f8:
+    uuid: e8abbabd-0d68-4192-a72c-1c99901d01f8
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 400
+      height: 300
+      anchor: center-top
+  4546f2c0-64c7-4582-9364-d742f8a96c84:
+    uuid: 4546f2c0-64c7-4582-9364-d742f8a96c84
+    id: image_convert
+    weight: 2
+    data:
+      extension: webp

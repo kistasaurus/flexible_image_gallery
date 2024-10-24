@@ -1,0 +1,13 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+  enforced:
+    module:
+      - flexible_image_gallery
+id: media.flexible_image_gallery
+label: 'Flexible Image Gallery'
+description: 'Image style used with Flexible Image Gallery module.'
+targetEntityType: media
+cache: true
