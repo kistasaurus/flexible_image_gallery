@@ -1,13 +1,15 @@
 .flexible-image-gallery {
 	container-type: inline-size;
-  	display: flex;
+  display: flex;
 	flex-wrap: wrap;
-	margin-top: var(--gallery-gap);
-	margin-bottom: var(--gallery-gap);
 
   --gallery-row: 3;
 	--gallery-gap: 1rem;
+	--gallery-margin-top: var(--gallery-gap);
+	--gallery-margin-bottom: var(--gallery-gap);
 	gap: var(--gallery-gap);
+	margin-top: var(--gallery-margin-top);
+	margin-bottom: var(--gallery-margin-bottom);
 }
 
 .fig--single .fig--item {
