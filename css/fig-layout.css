@@ -1,0 +1,31 @@
+.flexible-image-gallery {
+	container-type: inline-size;
+  display: flex;
+	flex-wrap: wrap;
+
+  --gallery-row: 3;
+	--gallery-gap: 1rem;
+	gap: var(--gallery-gap);
+}
+
+.fig--single .fig--item {
+	flex: 0 1 auto;
+}
+
+.fig--even {
+	--gallery-row: 2;
+}
+
+.fig--prime {
+	.fig--item:nth-child(-n + 2) {
+		--gallery-row: 2;
+	}
+}
+
+.fig--item {
+	box-sizing: border-box;
+	flex: 1 0 100%;
+	@container (min-width: 600px) {
+		flex: 1 1 calc(100% / var(--gallery-row) - var(--gallery-gap));
+	}
+}

@@ -1,0 +1,4 @@
+flexible_image_gallery:
+  css:
+    layout:
+      css/fig-layout.css: {}
