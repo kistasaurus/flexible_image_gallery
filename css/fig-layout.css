@@ -1,7 +1,9 @@
 .flexible-image-gallery {
 	container-type: inline-size;
-  display: flex;
+  	display: flex;
 	flex-wrap: wrap;
+	margin-top: var(--gallery-gap);
+	margin-bottom: var(--gallery-gap);
 
   --gallery-row: 3;
 	--gallery-gap: 1rem;
