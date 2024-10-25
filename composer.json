@@ -1,0 +1,15 @@
+{
+    "name": "drupal/flexible_image_gallery",
+    "description": "Creates a custom block type to display a gallery of media images in a lovely, flexible grid.",
+    "type": "drupal-module",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "Kristin",
+            "email": "3922004+kistasaurus@users.noreply.github.com"
+        }
+    ],
+    "require": {
+        "drupal/glightbox": "^1.0"
+    }
+}
