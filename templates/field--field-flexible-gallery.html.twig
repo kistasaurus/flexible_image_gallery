@@ -41,6 +41,15 @@
 {# Attach the theme library #}
 {{ attach_library('flexible_image_gallery/flexible_image_gallery') }}
 
+{# Set the gap units from the config #}
+<style>
+.flexible-image-gallery {
+  --gallery-gap: {{ gap }};
+  --gallery-margin-top:{{ margin_top }};
+  --gallery-margin-bottom: {{ margin_bottom }};
+}
+</style>
+
 {# Check how many items are in the gallery and add a class to handle that correctly. #}
 {% set gallery_items = items|length %}
 {% if gallery_items == 1 %}

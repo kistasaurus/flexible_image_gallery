@@ -1,0 +1,10 @@
+flexible_image_gallery.settings:
+  path: '/admin/flexible_image_gallery/settings'
+  defaults:
+    _form: '\Drupal\flexible_image_gallery\Form\Settings'
+    _title: 'Flexible Image Gallery settings'
+  requirements:
+    _permission: 'manage flexible image gallery settings'
+    _user_is_logged_in: 'true'
+  options:
+    _admin_route: TRUE

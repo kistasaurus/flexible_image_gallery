@@ -30,3 +30,34 @@ function flexible_image_gallery_theme($existing, $type, $theme, $path) {
     ],
   ];
 }
+
+function flexible_image_gallery_preprocess_field__field_flexible_gallery(&$variables)
+{
+  $config = \Drupal::config('flexible_image_gallery.settings');
+
+  // Process gap configurations to get it in units
+  $config_gap = $config->get('gap') ?? 1;
+  $config_gap_unit = $config->get('gap_unit') ?? 0;
+  if ($config_gap_unit === 1) {
+    $gap_unit = "em";
+  } elseif ($config_gap_unit === 2) {
+    $gap_unit = "px";
+  } else {
+    $gap_unit = "rem";
+  }
+  $variables['gap'] = $config_gap . $gap_unit;
+
+  // Process margin configurations to get them in units
+  $config_margin_top = $config->get('margin_top') ?? 1;
+  $config_margin_bottom = $config->get('margin_bottom') ?? 1;
+  $config_margin_unit = $config->get('margin_unit') ?? 0;
+  if ($config_margin_unit === 1) {
+    $margin_unit = "em";
+  } elseif ($config_margin_unit === 2) {
+    $margin_unit = "px";
+  } else {
+    $margin_unit = "rem";
+  }
+  $variables['margin_top'] = $config_margin_top . $margin_unit;
+  $variables['margin_bottom'] = $config_margin_bottom . $margin_unit;
+}

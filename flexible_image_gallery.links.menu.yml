@@ -1,0 +1,5 @@
+flexible_image_gallery.settings:
+  title: 'Flexible Image Gallery settings'
+  description: 'Adjust spacing for the Flexible Image Gallery.'
+  parent: system.admin_config_content
+  route_name: flexible_image_gallery.settings
