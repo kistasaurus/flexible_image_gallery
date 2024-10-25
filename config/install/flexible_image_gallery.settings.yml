@@ -1,3 +1,5 @@
-gap: '1rem'
-margin_top: '1rem'
-margin-bottom: '1rem'
+gap: 1
+gap_unit: 0
+margin_top: 1
+margin_bottom: 1
+margin_unit: 0
