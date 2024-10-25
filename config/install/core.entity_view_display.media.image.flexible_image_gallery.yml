@@ -21,7 +21,7 @@ mode: flexible_image_gallery
 content:
   field_media_image:
     type: glightbox
-    label: visually_hidden
+    label: hidden
     settings:
       glightbox_node_style: flexible_gallery_thumbnail
       glightbox_node_style_first: ''
