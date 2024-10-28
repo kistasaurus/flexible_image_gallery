@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.media.field_fig_caption
+    - media.type.image
+  module:
+    - text
+id: media.image.field_fig_caption
+field_name: field_fig_caption
+entity_type: media
+bundle: image
+label: Flexible Image Gallery Caption
+description: 'Additional information about this image.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text

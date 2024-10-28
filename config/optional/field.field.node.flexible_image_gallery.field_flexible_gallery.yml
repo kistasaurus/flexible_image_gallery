@@ -1,0 +1,28 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_flexible_gallery
+    - media.type.image
+    - node.type.flexible_image_gallery
+id: node.flexible_image_gallery.field_flexible_gallery
+field_name: field_flexible_gallery
+entity_type: node
+bundle: flexible_image_gallery
+label: 'Flexible Gallery'
+description: 'Add images to be displayed in the gallery.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference
