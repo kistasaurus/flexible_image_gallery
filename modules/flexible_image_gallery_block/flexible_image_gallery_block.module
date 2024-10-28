@@ -1,0 +1,20 @@
+<?php
+
+/**
+ * @file
+ * Flexible Image Gallery Block module file.
+ */
+
+ use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function flexible_image_gallery_block_help(string $route_name, RouteMatchInterface $route_match) {
+  if ($route_name === 'help.page.flexible_image_gallery_block') {
+    $output = '<h3>' . t('About') . '</h3>';
+    $output .= '<p>' . t('Creates a custom block type to display a gallery of media images in a lovely, flexible grid.') . '</p>';
+    $output .= '<p>' . t('To learn more or report issues, ') . '<a href="https://github.com/kistasaurus/flexible_image_gallery/" target="_blank">' . t('visit the Github repo') . '</a>.</p>';
+    return $output;
+  }
+}
