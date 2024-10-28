@@ -7,7 +7,7 @@
 - (Optional, using sub-module Flexible Image Gallery Blocks) Creates a custom block type that can be used in the Block Layout, Layout Builder, or anywhere else you can place custom blocks.
 
 ## Starting Up
-Requires the Drupal core Media and Media Library modules and the gLightbox module.
+Requires the Drupal core Media and Media Library modules and the [gLightbox module](https://www.drupal.org/project/glightbox).
 
 ### Flexible Image Gallery main module
 On install, a new content type and associated fields and styles will be created.
@@ -41,3 +41,10 @@ The image caption field has been added, but you may need to adjust your media im
 
 ## Uninstall
 Uninstalling will remove image styles and Flexible Image Gallery media display mode.  Uninstalling the Flexible Image Gallery Block submodule will uninstall the the custom block type and fields.
+
+## Screenshots
+![A screenshot showing a sample Drupal page with a Flexible Gallery.](https://github.com/user-attachments/assets/a88023ae-d97e-4dc9-b71e-55546397655e)
+_The gallery will adjust to the number of items uploaded in the field._
+
+![A screenshot showing a sample image open in a gLightbox modal.](https://github.com/user-attachments/assets/efa90cb5-9645-46db-a15c-bd62e796dac2)
+_Image thumbnails display a modal with the full original image on click._
