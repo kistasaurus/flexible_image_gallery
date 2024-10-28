@@ -1,7 +1,7 @@
 langcode: en
 status: true
 dependencies:
-  enforced:
+enforced:
     module:
       - flexible_image_gallery
 name: flexible_gallery_thumbnail
