@@ -1,9 +1,9 @@
 langcode: en
 status: true
 dependencies:
-enforced:
-    module:
-      - flexible_image_gallery
+    enforced:
+        module:
+          - flexible_image_gallery
 name: flexible_gallery_thumbnail
 label: 'Flexible Gallery Thumbnail'
 effects:
