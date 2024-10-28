@@ -3,6 +3,7 @@
 
 ## What does it do?
 - Creates a content type "Flexible Image Gallery" with associated fields and image styles to display a nice looking, flexible, gallery grid.
+- Uses gLightbox to display the full images in a modal.
 - (Optional, using sub-module Flexible Image Gallery Blocks) Creates a custom block type that can be used in the Block Layout, Layout Builder, or anywhere else you can place custom blocks.
 
 ## Starting Up
