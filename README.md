@@ -7,7 +7,7 @@
 - (Optional, using sub-module Flexible Image Gallery Blocks) Creates a custom block type that can be used in the Block Layout, Layout Builder, or anywhere else you can place custom blocks.
 
 ## Starting Up
-Requires the Drupal core Media and Media Library modules and the [gLightbox module](https://www.drupal.org/project/glightbox).
+Requires Media, Media Library, [gLightbox](https://www.drupal.org/project/glightbox), and [Token](https://www.drupal.org/project/token) modules.
 
 ### Flexible Image Gallery main module
 On install, a new content type and associated fields and styles will be created.
