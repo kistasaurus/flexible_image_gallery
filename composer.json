@@ -3,7 +3,6 @@
     "description": "Creates a custom block type to display a gallery of media images in a lovely, flexible grid.",
     "type": "drupal-module",
     "license": "GPL-2.0-or-later",
-    "version": "1.0.0",
     "authors": [
         {
             "name": "Kristin",
@@ -11,6 +10,7 @@
         }
     ],
     "require": {
-        "drupal/glightbox": "^1.0"
+        "drupal/glightbox": "^1.0",
+        "drupal/token": "^1.15"
     }
 }
