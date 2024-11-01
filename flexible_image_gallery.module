@@ -5,7 +5,7 @@
  * Flexible Image Gallery module file.
  */
 
- use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Routing\RouteMatchInterface;
 
 /**
  * Implements hook_help().
@@ -13,7 +13,7 @@
 function flexible_image_gallery_help(string $route_name, RouteMatchInterface $route_match) {
   if ($route_name === 'help.page.flexible_image_gallery') {
     $output = '<h3>' . t('About') . '</h3>';
-    $output .= '<p>' . t('Creates a custom block type to display a gallery of media images in a lovely, flexible grid.') . '</p>';
+    $output .= '<p>' . t('Creates a custom content type to display a gallery of media images in a lovely, flexible grid.') . '</p>';
     $output .= '<p>' . t('To learn more or report issues, ') . '<a href="https://github.com/kistasaurus/flexible_image_gallery/" target="_blank">' . t('visit the Github repo') . '</a>.</p>';
     return $output;
   }
@@ -31,8 +31,12 @@ function flexible_image_gallery_theme($existing, $type, $theme, $path) {
   ];
 }
 
-function flexible_image_gallery_preprocess_field__field_flexible_gallery(&$variables)
-{
+/**
+ * Implements hook_preprocess_HOOK() for HTML document templates.
+ *
+ * Allow gap to be adjusted.
+ */
+function flexible_image_gallery_preprocess_html(&$variables) {
   $config = \Drupal::config('flexible_image_gallery.settings');
 
   // Process gap configurations to get it in units
@@ -45,7 +49,7 @@ function flexible_image_gallery_preprocess_field__field_flexible_gallery(&$varia
   } else {
     $gap_unit = "rem";
   }
-  $variables['gap'] = $config_gap . $gap_unit;
+  $gap = $config_gap . $gap_unit;
 
   // Process margin configurations to get them in units
   $config_margin_top = $config->get('margin_top') ?? 1;
@@ -58,6 +62,8 @@ function flexible_image_gallery_preprocess_field__field_flexible_gallery(&$varia
   } else {
     $margin_unit = "rem";
   }
-  $variables['margin_top'] = $config_margin_top . $margin_unit;
-  $variables['margin_bottom'] = $config_margin_bottom . $margin_unit;
+  $margin_top = $config_margin_top . $margin_unit;
+  $margin_bottom = $config_margin_bottom . $margin_unit;
+
+  $variables['html_attributes']->setAttribute('style', "--fig-gap:$gap;--fig-margin-top:$margin_top;--fig-margin-bottom:$margin_bottom;");
 }
