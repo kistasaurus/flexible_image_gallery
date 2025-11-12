@@ -1,4 +1,5 @@
 flexible_image_gallery:
+  version: 1.0.1
   css:
     layout:
       css/fig-layout.css: {}

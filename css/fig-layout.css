@@ -1,16 +1,17 @@
 .flexible-image-gallery {
 	container-type: inline-size;
-  	display: flex;
+	display: flex;
 	flex-wrap: wrap;
 	margin-top: var(--gallery-gap);
 	margin-bottom: var(--gallery-gap);
+	justify-content: center;
 
   --gallery-row: 3;
 	--gallery-gap: 1rem;
 	gap: var(--gallery-gap);
 }
 
-.fig--single .fig--item {
+.fig--single.fig--item {
 	flex: 0 1 auto;
 }
 
